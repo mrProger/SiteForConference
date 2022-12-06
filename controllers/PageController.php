@@ -1,6 +1,7 @@
 <?php
 
 use PHPView\View;
+use PHPTemplater\Template;
 use PHPExceptionHandler\ExceptionHandler;
 
 class PageController {
@@ -17,5 +18,9 @@ class PageController {
     public static function registration_page() {
         $template = new Template(__DIR__ . "/../pages/registration.html");
         echo View::createFromTemplate($template);
+    }
+
+    public static function generate_error() {
+        ExceptionHandler::generateError("Тестовое исключение");
     }
 }

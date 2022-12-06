@@ -6,16 +6,14 @@ include __DIR__ . '/app/PHPOrm/MySQL.php';
 include __DIR__ . '/app/PHPTemplater/Template.php';
 include __DIR__ . '/app/PHPView/View.php';
 include __DIR__ . '/app/PHPRequester/Request.php';
-include __DIR__ . '/app/PHPModel/Model.php';
 
 // Подключение системных пространств имен
 use PHPRouter\Router;
-use PHPTemplater\Template;
 use PHPRequester\Request;
 
 // Создание системных объектов
 $router = new Router();
-$orm = new MySQL("localhost", "root", "", "123");
+$orm = new MySQL("localhost", "root", "", "conference_site");
 $request = new Request();
 
 // Подключение контроллеров

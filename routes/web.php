@@ -9,3 +9,6 @@ $router->get("/", "PageController::index_page");
 $router->get("auth", "PageController::auth_page");
 
 $router->get("registration", "PageController::registration_page");
+
+$router->post("api/v1/generate-error", "PageController::generate_error");
+
